@@ -8,12 +8,30 @@ public class TaskItem
     public DateTime Date { get; set; }
     public EnumTaskStatus Status { get; set; }
 
-    public TaskItem(string title)
+    public TaskItem(string title, string description)
     {
         Title = title;
         Id = Guid.NewGuid();
-        Description = "";
+        Description = description;
         Date = DateTime.Now;
         Status = EnumTaskStatus.Pendente;
+    }
+
+    public void UpdateTask(UpdateTaskDto updateTaskDto)
+    {
+        if (!string.IsNullOrEmpty(updateTaskDto.Title))
+        {
+            Title = updateTaskDto.Title;
+        }
+
+        if (!string.IsNullOrEmpty(updateTaskDto.Description))
+        {
+            Description = updateTaskDto.Description;
+        }
+
+        if (updateTaskDto.Status.HasValue)
+        {
+            Status = updateTaskDto.Status.Value;
+        }
     }
 }

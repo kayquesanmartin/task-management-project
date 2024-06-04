@@ -13,7 +13,7 @@ public class AppDbContext : DbContext
     // override Configuring -> Auto preenche
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=KAYQUE-PC\\SQLEXPRESS; Initial Catalog=TaskManager;Integrated Security=true; TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer("Server=KAYQUE\\SQLEXPRESS; Initial Catalog=TaskManager;Integrated Security=true; TrustServerCertificate=True");
         
         base.OnConfiguring(optionsBuilder);
     }

@@ -1,7 +1,6 @@
-
-## Rotas da API
-
 ## Documentação da API
+
+### Rotas da API
 
 #### Criar uma nova tarefa
 - URL: /Task

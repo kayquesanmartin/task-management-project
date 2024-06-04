@@ -3,9 +3,6 @@
 ### Rotas da API
 
 #### Criar uma nova tarefa
-- URL: /Task
-- Método: POST
-- Body:
 
 ```http
   POST /Task

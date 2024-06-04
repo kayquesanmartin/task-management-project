@@ -39,7 +39,7 @@
 Gerenciador_de_Tarefas/
 ├── Data/
 │   └── AppDbContext.cs
-├── DTOs/
+├── DTO/
 │   ├── TaskDto.cs
 │   └── UpdateTaskDto.cs
 ├── Entities/

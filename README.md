@@ -33,6 +33,16 @@
 | :---------- | :--------- | :---------------------------------------------------|
 | `id`        | `GUID`     | **Obrigatório**. O ID do item que você quer alterar |
 
+#### Deletar uma tarefa
+
+```http
+  DELETE /{id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                           |
+| :---------- | :--------- | :---------------------------------------------------|
+| `id`        | `GUID`     | **Obrigatório**. O ID do item que você quer alterar |
+
 ## Estrutura do Projeto
 
 ```

@@ -51,7 +51,22 @@ public static class TaskRoutes
                 task.UpdateTask(updateTaskDto);
                 await context.SaveChangesAsync(ct);
 
-                return Results.NoContent();
+                return Results.Ok(task);
             });
+
+        taskRoutes.MapDelete("{id}", async (Guid id, AppDbContext context, CancellationToken ct) =>
+        {
+            var task = await context.Tasks
+                .SingleOrDefaultAsync(task => task.Id == id, ct);
+
+            if (task == null)
+                return Results.NotFound();
+
+            context.Tasks.Remove(task);
+
+            await context.SaveChangesAsync();
+
+            return Results.Ok(task);
+        });
     }
 }
